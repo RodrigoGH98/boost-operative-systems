@@ -35,7 +35,7 @@ const Header = () => {
         <img 
           src="/lovable-uploads/cd760326-6692-49e4-adc8-9d587d70cf76.png" 
           alt="BOOST - Potencializa tus ideas" 
-          className="h-12 sm:h-16 lg:h-20 w-auto transition-all duration-300 hover:scale-105"
+          className="h-16 sm:h-20 lg:h-28 w-auto transition-all duration-300 hover:scale-105"
         />
         
         {/* Desktop Navigation */}
