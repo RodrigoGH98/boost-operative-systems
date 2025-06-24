@@ -10,8 +10,7 @@ const Header = () => {
   const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-  const headerOpacity = Math.max(0.9, 1 - scrollProgress * 0.3);
-  const headerScale = Math.max(0.95, 1 - scrollProgress * 0.05);
+  const headerOpacity = Math.max(0.95, 1 - scrollProgress * 0.1);
   const borderOpacity = Math.min(1, scrollY / 100);
 
   const toggleMenu = () => {
@@ -24,10 +23,9 @@ const Header = () => {
 
   return (
     <header 
-      className="sticky top-0 z-50 backdrop-blur-sm border-b transition-all duration-300 w-full"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-all duration-300 w-full"
       style={{
         backgroundColor: `rgba(0, 0, 0, ${headerOpacity})`,
-        transform: `scale(${headerScale})`,
         borderBottomColor: `rgba(156, 163, 175, ${borderOpacity})`
       }}
     >
