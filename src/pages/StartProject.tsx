@@ -40,7 +40,7 @@ const StartProject = () => {
     return (
       <LanguageProvider>
         <div className="bg-black text-white min-h-screen">
-          <header className="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 flex justify-between items-center px-6 py-3 max-w-7xl mx-auto">
+          <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 flex justify-between items-center px-6 py-3 max-w-7xl mx-auto">
             <Link to="/">
               <img 
                 src="/lovable-uploads/cd760326-6692-49e4-adc8-9d587d70cf76.png" 
@@ -49,7 +49,7 @@ const StartProject = () => {
               />
             </Link>
           </header>
-          <div className="flex items-center justify-center min-h-[80vh]">
+          <div className="flex items-center justify-center min-h-[80vh] pt-24">
             <div className="text-center max-w-2xl mx-auto px-6">
               <div className="text-6xl mb-8">✅</div>
               <h1 className="text-4xl font-bold mb-4">Thank You!</h1>
@@ -70,7 +70,7 @@ const StartProject = () => {
   return (
     <LanguageProvider>
       <div className="bg-black text-white min-h-screen">
-        <header className="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 flex justify-between items-center px-6 py-3 max-w-7xl mx-auto">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800 flex justify-between items-center px-6 py-3 max-w-7xl mx-auto">
           <Link to="/">
             <img 
               src="/lovable-uploads/cd760326-6692-49e4-adc8-9d587d70cf76.png" 
@@ -86,17 +86,19 @@ const StartProject = () => {
           </Link>
         </header>
 
-        <ProjectHero onScrollToForm={scrollToForm} />
-        <ServiceSelector 
-          selectedServices={selectedServices} 
-          onToggleService={toggleService} 
-        />
-        <HowItWorks />
-        <ProjectForm 
-          selectedChallenges={selectedChallenges}
-          onToggleChallenge={toggleChallenge}
-          onSubmit={handleSubmit}
-        />
+        <div className="pt-24 sm:pt-28 lg:pt-36">
+          <ProjectHero onScrollToForm={scrollToForm} />
+          <ServiceSelector 
+            selectedServices={selectedServices} 
+            onToggleService={toggleService} 
+          />
+          <HowItWorks />
+          <ProjectForm 
+            selectedChallenges={selectedChallenges}
+            onToggleChallenge={toggleChallenge}
+            onSubmit={handleSubmit}
+          />
+        </div>
       </div>
     </LanguageProvider>
   );
