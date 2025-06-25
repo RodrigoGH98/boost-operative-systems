@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { servicesData } from "@/data/servicesData";
 import ServiceCard from '@/components/ServiceCard';
 import ServiceDetails from '@/components/ServiceDetails';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ServiceSelectorProps {
   selectedServices: string[];
@@ -11,6 +11,7 @@ interface ServiceSelectorProps {
 
 const ServiceSelector = ({ selectedServices, onToggleService }: ServiceSelectorProps) => {
   const [activeService, setActiveService] = React.useState<string | null>(null);
+  const { t } = useLanguage();
 
   const handleServiceClick = (serviceId: string) => {
     // Clear all other selections and only select the clicked service
@@ -46,7 +47,7 @@ const ServiceSelector = ({ selectedServices, onToggleService }: ServiceSelectorP
   return (
     <section className="py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">What type of project do you need?</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">{t('serviceSelector.title')}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {servicesData.map((service, index) => (
             <React.Fragment key={service.id}>

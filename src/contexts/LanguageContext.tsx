@@ -232,6 +232,24 @@ const translations = {
     'footer.privacy': 'Privacidad',
     'footer.linkedin': 'LinkedIn',
     'footer.rights': 'Todos los derechos reservados.'
+  },
+    // Service Selector
+    'serviceSelector.title': 'What type of project do you need?',
+    'howItWorks.title': 'How It Works',
+    'howItWorks.step1': 'Submit your idea',
+    'howItWorks.step2': 'We diagnose your need',
+    'howItWorks.step3': 'You receive a plan',
+    'howItWorks.step4': 'We build it',
+    'howItWorks.step5': 'You launch + optimize',
+  es: {
+    // Service Selector
+    'serviceSelector.title': '¿Qué tipo de proyecto necesitas?',
+    'howItWorks.title': 'Cómo Funciona',
+    'howItWorks.step1': 'Envía tu idea',
+    'howItWorks.step2': 'Diagnosticamos tu necesidad',
+    'howItWorks.step3': 'Recibes un plan',
+    'howItWorks.step4': 'Lo construimos',
+    'howItWorks.step5': 'Lanzas + optimizas',
   }
 };
 
